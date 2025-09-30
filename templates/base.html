@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}My Website{% endblock %}</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Make footer stick at bottom */
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+
+    <!-- Main Body -->
+    {% block content %}
+    <main class="container my-5">
+      <div class="row">
+        <div class="col">
+          <h1>Welcome to My Website</h1>
+          <p>
+            This is the main content area. Replace this with your page content.
+          </p>
+        </div>
+      </div>
+    </main>
+    {% endblock %}
+    <!-- Footer (always at screen end) -->
+    {% include 'footer.html' %}
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
