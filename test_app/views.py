@@ -5,6 +5,22 @@ from django.db.models import F
 import time
 
 def index(request):
+   
+   '''
+   name = 'Ridoy'
+   age = 200
+   stu = Students.objects.all().update(age=F('age') * 1.50
+   )
+   for i in stu:
+      print(i.Name , i.age)
+   print(stu)
+   return render(request, 'Home/home.html', {'na': name, 'a': age
+   })
+   
+   '''
+   
+   
+   #hi
    # stu = Students.objects.all()
    # for i in stu:
    #    print(i.Name , i.age)
